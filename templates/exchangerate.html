@@ -1,0 +1,39 @@
+{% extends "basefile.html" %}
+{% block content %}
+<div class="container mx-auto text-center">
+<h3 class="py-3">EXCHANGE RATES</h3>
+<h4 class="pb-3">USD: Amount = {{exchange_rate_dict.get("USD")["value"]}}</h4>
+<div class="container text-center mx-auto">
+<div class="row container text-center mx-auto" style="width:600px">
+    <div class="col container">
+        <h6><b>Currency code</b></h6>
+    </div>
+    {% if "name" in exchange_rate_dict.get("AED") %}
+    <div class="col container">
+        <h6><b>Currency</b></h6>
+    </div>
+    {% endif %}
+    <div class="col container">
+        <h6><b>Amount</b></h6>
+    </div>
+</div>
+{% for every_currency in exchange_rate_dict.keys() %}
+    <div class="container" style="width:700px">
+    <div class="row bg-warning text-dark pt-2">
+        <div class="col">
+            <p>{{exchange_rate_dict.get(every_currency)["code"]}}</p>
+        </div>
+        {% if "name" in exchange_rate_dict.get(every_currency) %}
+        <div class="col">
+            <p>{{exchange_rate_dict.get(every_currency)["code"]["name"]}}</p>
+        </div>
+        {% endif %}
+        <div class="col">
+            <p><b>{{exchange_rate_dict.get(every_currency)["value"]}}</b></p>
+        </div>
+    </div><br>
+    </div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}

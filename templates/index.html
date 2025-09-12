@@ -1,0 +1,37 @@
+{% extends "basefile.html" %}
+{% block content %}
+<div class="container mx-auto text-center">
+    <form action="" method="GET" class="container" style="width:450px">
+        <div class="container pt-3">
+            <input type="number" name="currency_input" class="form-control" placeholder="Enter the amount to convert" step="any" required>
+        </div>
+        <div class="row container pt-3">
+            <div class="col">
+                <select name="from_currency_choice" id="currency1" class="form-select w-auto d-inline-block">
+                    {% for curr_code in currency_code_arr %}
+                    <option value={{curr_code}}>{{curr_code}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col">
+                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/long-arrow-right.png" alt="long-arrow-right"/>
+            </div>
+            <div class="col">
+                <select name="to_currency_choice" id="currency2" class="form-select w-auto d-inline-block">
+                    {% for curr_code in currency_code_arr %}
+                    <option value={{curr_code}}>{{curr_code}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="container pt-3">
+            <button type="submit" name="convert_button" value="convert_button" class="btn text-white" style="background-color:#001d3d">
+                Convert
+            </button>
+        </div>
+    </form>
+    {%if user_input and source_currency and destination_currency %}
+        <h3 class="pt-4">{{user_input}} {{source_currency}} = {{ans}} {{destination_currency}}</h3>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,7 +1,7 @@
 {% extends "basefile.html" %}
 {% block content %}
 <div class="container mx-auto text-center">
-    <form action="" method="GET" class="container" style="width:450px">
+    <form action="" method="GET" class="container" style="width:350px">
         <div class="container pt-3">
             <input type="number" name="currency_input" class="form-control" placeholder="Enter the amount to convert" step="any" required>
         </div>
@@ -34,4 +34,5 @@
         <h3 class="pt-4">{{user_input}} {{source_currency}} = {{ans}} {{destination_currency}}</h3>
     {% endif %}
 </div>
+
 {% endblock %}

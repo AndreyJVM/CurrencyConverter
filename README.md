@@ -1,4 +1,15 @@
 # CurrencyConverter [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+<p align="center">
+  <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Freshmaharidhas%2FCurrencyConverter&label=Visitors&labelColor=%2300ff00&countColor=%23000000&style=plastic&labelStyle=none"/>
+  <img src="https://img.shields.io/github/forks/reshmaharidhas/CurrencyConverter"/>
+  <img src="https://img.shields.io/github/languages/top/reshmaharidhas/CurrencyConverter"/>
+  <img src="https://img.shields.io/github/repo-size/reshmaharidhas/CurrencyConverter"/>
+  <img src="https://img.shields.io/github/languages/code-size/reshmaharidhas/CurrencyConverter"/>
+  <img src="https://img.shields.io/github/languages/count/reshmaharidhas/CurrencyConverter"/>
+  <img src="https://img.shields.io/github/created-at/reshmaharidhas/CurrencyConverter"/>
+  <img src="https://img.shields.io/github/license/reshmaharidhas/CurrencyConverter"/>  
+</p>
+Web app to calculate all international currency conversion based on latest currency exchange rates.
 
 # Tech Stack💻
 - Python

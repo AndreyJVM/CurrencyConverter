@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 # session secret key.
-app.secret_key = "xyzcurr_"
+app.secret_key = os.getenv("FLASK_SECRET_KEY")
 # variable to access the API key stored as environment variable.
 app_api_key = os.getenv("CURRENCY_API_KEY")
 
